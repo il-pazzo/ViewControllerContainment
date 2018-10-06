@@ -13,15 +13,13 @@ import UIKit
 class SessionsViewController: UIViewController {
 
     var theLabel: UILabel = {
+        
         let label = UILabel()
-//        let label = UILabel( frame: CGRect(x: 0, y: 0, width: 300, height: 24))
-//        label.lineBreakMode = .byWordWrapping
         label.frame = CGRect( x:0, y:0, width:300, height:24 )
         label.textColor     = .black
         label.textAlignment = .center
-//        label.numberOfLines = 3
-//        label.font          = UIFont(name: "Helvetica-Bold", size: 22)
         label.font          = UIFont.preferredFont(forTextStyle: .subheadline)
+
         return label
     }()
 
@@ -37,8 +35,6 @@ class SessionsViewController: UIViewController {
         theLabel.text = "Hello from the SessionsViewController"
         theLabel.center = CGPoint( x: view.frame.width / 2, y: view.frame.height / 2 )
         
-//        theLabel.frame = CGRect(x: 0, y: 0, width: 300, height: 24)
-
         self.view.addSubview( theLabel )
     }
     func showSomeLabelWithSwift3()
@@ -62,12 +58,6 @@ class SessionsViewController: UIViewController {
         
         self.view.addSubview(label)
     }
-
-//    override func viewDidLayoutSubviews() {
-//        print( "viewDidLayoutSubviews..." )
-//        theLabel.center = CGPoint( x: view.frame.width / 2, y: view.frame.height / 2 )
-//        theLabel.frame = CGRect(x: 0, y: 0, width: 300, height: 24)
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

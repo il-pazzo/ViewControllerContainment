@@ -66,29 +66,6 @@ class MasterViewController: UIViewController {
         else {
             currentVC = sessionsViewController
         }
-        
-//        if let lastUsedVC = lastUsedVC {
-//            remove( asChildViewController: lastUsedVC )
-//        }
-//
-//        if segmentedControl.selectedSegmentIndex == Segment.Summary.index {
-//            add( asChildViewController: summaryViewController )
-//            lastUsedVC = summaryViewController
-//        }
-//        else {
-//            add( asChildViewController: sessionsViewController )
-//            lastUsedVC = sessionsViewController
-//        }
-        
-//        if segmentedControl.selectedSegmentIndex == Segment.Summary.index {
-//
-//            remove( asChildViewController: sessionsViewController )
-//            add( asChildViewController: summaryViewController )
-//        }
-//        else {
-//            remove( asChildViewController: summaryViewController )
-//            add( asChildViewController: sessionsViewController )
-//        }
     }
     
     // MARK: - lazy properties to set up child view controllers
@@ -97,16 +74,12 @@ class MasterViewController: UIViewController {
         
         var vc = UIStoryboard.main.instantiateViewController( withIdentifier: SummaryViewController.storyboardIdentifier ) as! SummaryViewController
         
-//        self.add( asChildViewController: vc )
-        
         return vc
     }()
     
     private lazy var sessionsViewController: SessionsViewController = {
         
         var vc = UIStoryboard.main.instantiateViewController(withIdentifier: SessionsViewController.storyboardIdentifier ) as! SessionsViewController
-        
-//        self.add( asChildViewController: vc )
         
         return vc
     }()
