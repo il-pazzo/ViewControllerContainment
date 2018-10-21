@@ -72,15 +72,13 @@ class MasterViewController: UIViewController {
     
     private lazy var summaryViewController: SummaryViewController = {
         
-        var vc = UIStoryboard.main.instantiateViewController( withIdentifier: SummaryViewController.storyboardIdentifier ) as! SummaryViewController
-        
+        var    vc = SummaryViewController.instantiate() as! SummaryViewController
         return vc
     }()
     
     private lazy var sessionsViewController: SessionsViewController = {
         
-        var vc = UIStoryboard.main.instantiateViewController(withIdentifier: SessionsViewController.storyboardIdentifier ) as! SessionsViewController
-        
+        var    vc = SessionsViewController.instantiate() as! SessionsViewController
         return vc
     }()
     
